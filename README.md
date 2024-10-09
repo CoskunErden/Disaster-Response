@@ -8,7 +8,7 @@ The "Disaster Response Pipeline" project is a machine learning-based web applica
 
 Project Components
 
-     1. **ETL Pipeline**
+     1. ETL Pipeline
    - The ETL pipeline reads and processes two datasets:
      - messages.csv: Contains the messages sent during disaster events.
      - categories.csv: Contains the categories to which each message belongs.
@@ -35,7 +35,7 @@ Project Components
 
 Here is the project structure:
 
-```
+
 Root Directory
 │
 ├── app
@@ -56,7 +56,7 @@ Root Directory
 ├── README.md                    # ReadMe file (you are here!)
 ├── .gitignore                   # Files to ignore in Git
 └── LICENSE                      # License for the project
-```
+
 
 
 
@@ -64,7 +64,7 @@ Root Directory
 
      1. Clone the repository:
 
-```
+
 git clone https://github.com/CoskunErden/Disaster-Response.git
 cd Disaster-Response
 ```
@@ -152,6 +152,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thanks to [Figure Eight](https://appen.com/) for providing the disaster response data and to Udacity for designing this capstone project.
 
----
 
-This README provides a basic structure for your project and makes it easier for others to understand and use your project. You can modify the sections as needed.
