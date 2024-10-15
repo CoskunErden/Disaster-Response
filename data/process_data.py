@@ -45,9 +45,12 @@ def clean_data(df):
     category_colnames = row.apply(lambda x: x.split('-')[0])
     categories.columns = category_colnames
     
-    # Convert category values to just 0 or 1
+    # Convert category values to just 0 or 1, but handle the 'related' column with a value of 2
     for column in categories:
         categories[column] = categories[column].str.split('-').str[1].astype(int)
+    
+    # Replace 'related' column values of 2 with 1 (or drop the rows)
+    categories['related'] = categories['related'].replace(2, 1)
     
     # Drop the original 'categories' column from df
     df.drop('categories', axis=1, inplace=True)
@@ -59,6 +62,7 @@ def clean_data(df):
     df = df.drop_duplicates()
     
     return df
+
 
 def save_data(df, database_filepath):
     """
@@ -104,3 +108,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+cd 
