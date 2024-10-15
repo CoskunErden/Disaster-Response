@@ -60,6 +60,9 @@ def clean_data(df):
     
     # Drop duplicates
     df = df.drop_duplicates()
+
+    # Assert to check if there are no duplicates
+    assert len(df[df.duplicated()]) == 0, "There are duplicates in the dataframe!"
     
     return df
 
